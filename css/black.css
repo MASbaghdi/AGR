@@ -18,8 +18,10 @@ section.has-light-background h6 {
  * GLOBAL STYLES
  *********************************************/
 body {
-  background: #D4E4F7;
-  background-color: #D4E4F7;
+  /* background: rgb(97,140,189); */
+  /* background: linear-gradient(0deg, rgba(97,140,189,1) 0%, rgba(212,228,247,1) 20%, rgba(212,228,247,1) 80%, rgba(97,140,189,1) 100%); */
+  background: rgb(212,228,247);
+  background: radial-gradient(circle, rgba(212,228,247,1) 80%, rgba(97,140,189,1) 100%);
 }
 
 .reveal {
