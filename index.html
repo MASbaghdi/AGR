@@ -95,7 +95,7 @@
   </section>
   <section>
     <ul>
-      <li class="fragment">Un rôle définie une fonction d'un agent au sein d'un groupe.</li>
+      <li class="fragment">Un rôle définie une fonction qu'un agent peut occuper au sein d'un groupe.</li>
       <li class="fragment">Chaque agent peut avoir plusieurs rôles.</li>
       <li class="fragment">Un même rôle peut être tenu par plusieurs agents.</li>
       <li class="fragment">Les rôles sont locaux aux groupes.</li>
@@ -103,10 +103,14 @@
         être demandée par l’agent et n’est pas forcément accordée.</li>
     </ul>
   </section>
+	<section>
+		<p>Récap</p>
+		<img src="img/agr-meta-model.png"></img>
+	</section>
   <section>
     <p class="fragment">Un rôle est caractèrisé par :</p>
     <ul>
-      <li class="fragment">Unicité: un role est soit unique soit multiple.</li>
+      <li class="fragment">Unicité: un rôle est soit unique soit multiple.</li>
       <li class="fragment">Compétences: une condition que doit satisfaire l'agent pour pouvoir jouer un rôle.</li>
       <li class="fragment">Capacités: une propriété attribuée à un agent quand il joue un rôle particulier.</li>
       <li class="fragment">Un rôle par défaut est multiple, ne nécessite aucune compétence et n'offre aucune capacité.</li>
@@ -131,10 +135,56 @@
   </section>
 </section>
 
+<section>
+	<h4>Notation</h4>
+	<ul>
+		<li class="fragment">Un agent est représenté par une quille.</li>
+		<li class="fragment">Un groupe par une ellipse entourant des agents.</li>
+		<li class="fragment">Si un agent appartient à un groupe on peut définir son
+			rôle à l'aide d'un héxagone ou par une description textuelle.</li>
+	</ul>
+</section>
+
+<section>
+	<h4>Travelling Salesman Problem</h4>
+	<section>
+		<p class="fragment">Ayant un ensemble de villes et la distance qui les sépare
+			deux à deux.</p>
+		<p class="fragment">On veut trouver le plus court chemin passant par toutes
+			les villes.</p>
+	</section>
+
+	<section>
+		<p class="fragment">Solution naïve : tester tout les chemins possibles.</p>
+		<div class="fragment" id="naiveTSP" style="border: rgb(112,128,147) 1px solid">
+			<div>
+				<button id="naiveTSP-restart">Redémarrer</button>
+				<button id="naiveTSP-pause">Suspendre / Continuer</button>
+			</div>
+		</div>
+	</section>
+
+	<section>
+		<p class="fragment">Solution plus intelligente (heuristique) :
+			ACO (Ant Colony Optimization).</p>
+	</section>
+	<section>
+		<h5>Conception ACO Orienté Objet (UML)</h5>
+		<a href="img/ant-tsp-class-diagram.png" target="_blank"><img src="img/ant-tsp-class-diagram.png" height="300"></img></a>
+	</section>
+	<section>
+		<h5>Conception ACO Agent (AGR)</h5>
+		<a href="img/agr-tsp.png" target="_blank"><img src="img/agr-tsp.png" height="300"></img></a>
+	</section>
+</section>
+
 		</div></div>
 
 		<script src="js/reveal.js"></script>
 		<script src="js/jquery.slim.min.js"></script>
+		<script src="js/p5.min.js"></script>
+		<script src="js/p5.dom.min.js"></script>
+		<script src="js/sketch.js"></script>
 		<script>
 	Reveal.initialize({
 		hash: true,
