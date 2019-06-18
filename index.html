@@ -142,6 +142,8 @@
 		<li class="fragment">Un groupe par une ellipse entourant des agents.</li>
 		<li class="fragment">Si un agent appartient à un groupe on peut définir son
 			rôle à l'aide d'un héxagone ou par une description textuelle.</li>
+		<li class="fragment">L'interactions entre deux agents dans un groupe est
+			représenté par un segment reliant les deux agents.</li>
 	</ul>
 </section>
 
@@ -173,9 +175,46 @@
 		<a href="img/ant-tsp-class-diagram.png" target="_blank"><img src="img/ant-tsp-class-diagram.png" height="300"></img></a>
 	</section>
 	<section>
+		<h5>Conception ACO Orienté Objet (UML)</h5>
+		<ul>
+			<li>La classe Node permet de stocker la situation géographique d'une ville
+				et de calculer la distance entre deux villes.</li>
+			<li>La classe Environnement permet de sauvegarder et de fournir des données
+				aux fourmies (phéromones et distances).</li>
+			<li>La classe Ant modèlise les fourmies (où sont elles allées et où vont
+				elles partir).</li>
+			<li>La classe TSP permet d'ordonnancer les fourmies, elle implémente
+				l'algorithme.</li>
+		</ul>
+	</section>
+	<section>
 		<h5>Conception ACO Agent (AGR)</h5>
 		<a href="img/agr-tsp.png" target="_blank"><img src="img/agr-tsp.png" height="300"></img></a>
 	</section>
+	<section>
+		<h5>Conception ACO Agent (AGR)</h5>
+		<ul>
+			<li>L'agent Node à pour rôle de donner une localisation (d'une ville).</li>
+			<li>L'agent Environnement sert de tableau noir pour les fourmies (dépot
+				de phéromones).</li>
+			<li>L'agent Ant représente une fourmie.</li>
+			<li>L'agent Scheduler permet d'ordonnancer les fourmies.</li>
+		</ul>
+	</section>
+</section>
+
+<section>
+  <h4>MadKit</h4>
+  <ul>
+    <li class="fragment">MaDKit signfie Multiagent Developpement Kit.</li>
+    <li class="fragment">Créée par la même équipe qu'AGR (LIRMM).</li>
+    <li class="fragment">Bibliothéque java qui permet de simuler des systèmes
+			multi-agents, modélisés en AGR.</li>
+  </ul>
+</section>
+
+<section>
+  <h3>Fin.</h3>
 </section>
 
 		</div></div>
@@ -186,18 +225,18 @@
 		<script src="js/p5.dom.min.js"></script>
 		<script src="js/sketch.js"></script>
 		<script>
-	Reveal.initialize({
-		hash: true,
-		math: {
-			mathjax: 'MathJax/MathJax.js',
-			config: 'TeX-AMS_CHTML'
-		},
-		dependencies: [
-			{ src: 'js/highlight.js', async: true },
-			{ src: 'js/math.js', async: true }
-		]
-	});
-	Reveal.configure({ slideNumber: 'c/t' });
+Reveal.initialize({
+	hash: true,
+	math: {
+		mathjax: 'MathJax/MathJax.js',
+		config: 'TeX-AMS_CHTML'
+	},
+	dependencies: [
+		{ src: 'js/highlight.js', async: true },
+		{ src: 'js/math.js', async: true }
+	]
+});
+Reveal.configure({ slideNumber: 'c/t' });
 		</script>
 	</body>
 </html>
